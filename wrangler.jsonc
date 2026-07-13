@@ -1,0 +1,15 @@
+{
+  // Cloudflare Workers (Static Assets) deployment for the SVG → PNG SPA.
+  // The app is fully client-side, so this Worker just serves the built `dist`
+  // directory with a single-page-application fallback (unknown routes -> index.html).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "svg-to-png",
+  "compatibility_date": "2026-05-31",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

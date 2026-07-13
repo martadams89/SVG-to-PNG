@@ -15,6 +15,7 @@ import {
   Settings2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { baseName, outputFileName, parseSvgDimensions } from './lib/svg';
 
 interface CropData {
   x: number;
@@ -41,38 +42,13 @@ export default function App() {
       reader.onload = (e) => {
         const content = e.target?.result as string;
         setSvgContent(content);
-        setFileName(file.name.replace('.svg', ''));
-        
-        // Extract dimensions from SVG
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(content, 'image/svg+xml');
-        const svgElement = doc.querySelector('svg');
-        
-        if (svgElement) {
-          let width = parseFloat(svgElement.getAttribute('width') || '0');
-          let height = parseFloat(svgElement.getAttribute('height') || '0');
-          
-          if (!width || !height) {
-            const viewBox = svgElement.getAttribute('viewBox');
-            if (viewBox) {
-              const parts = viewBox.split(/[ ,]+/).map(parseFloat);
-              if (parts.length === 4) {
-                width = parts[2];
-                height = parts[3];
-              }
-            }
-          }
-          
-          // Fallback if still no dimensions
-          if (!width || !height) {
-            width = 500;
-            height = 500;
-          }
+        setFileName(baseName(file.name));
 
-          setOriginalSize({ width, height });
-          setCrop({ x: 0, y: 0, width, height });
-          setScale(1);
-        }
+        // Extract dimensions from SVG (attributes, then viewBox, then default).
+        const { width, height } = parseSvgDimensions(content);
+        setOriginalSize({ width, height });
+        setCrop({ x: 0, y: 0, width, height });
+        setScale(1);
       };
       reader.readAsText(file);
     }
@@ -126,7 +102,7 @@ export default function App() {
   const handleDownload = () => {
     if (!previewUrl) return;
     const link = document.createElement('a');
-    link.download = `${fileName}_${scale}x.png`;
+    link.download = outputFileName(fileName, scale);
     link.href = previewUrl;
     link.click();
   };
