@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/martadams89/SVG-to-PNG/compare/v0.3.0...v0.4.0) (2026-07-13)
+
+
+### Features
+
+* add Paste Code tab for SVG/JSX to logo export ([#4](https://github.com/martadams89/SVG-to-PNG/issues/4)) ([77652bc](https://github.com/martadams89/SVG-to-PNG/commit/77652bc1138c020efa3151ef3cf039e52f64a18a))
+
 ## [0.3.0](https://github.com/martadams89/SVG-to-PNG/compare/v0.2.0...v0.3.0) (2026-07-13)
 
 
