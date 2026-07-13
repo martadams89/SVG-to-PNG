@@ -4,11 +4,12 @@
  */
 
 import { useState } from 'react';
-import { ImageDown, Sparkles } from 'lucide-react';
+import { Braces, ImageDown, Sparkles } from 'lucide-react';
 import Converter from './components/Converter';
 import LogoBuilder from './components/LogoBuilder';
+import PasteCode from './components/PasteCode';
 
-type Tab = 'convert' | 'logo';
+type Tab = 'convert' | 'logo' | 'paste';
 
 export default function App() {
   const [tab, setTab] = useState<Tab>('convert');
@@ -16,6 +17,7 @@ export default function App() {
   const tabs: { id: Tab; label: string; icon: typeof ImageDown }[] = [
     { id: 'convert', label: 'SVG → PNG', icon: ImageDown },
     { id: 'logo', label: 'Logo Builder', icon: Sparkles },
+    { id: 'paste', label: 'Paste Code', icon: Braces },
   ];
 
   return (
@@ -51,7 +53,13 @@ export default function App() {
           </div>
         </header>
 
-        {tab === 'convert' ? <Converter /> : <LogoBuilder />}
+        {tab === 'convert' ? (
+          <Converter />
+        ) : tab === 'logo' ? (
+          <LogoBuilder />
+        ) : (
+          <PasteCode />
+        )}
       </div>
 
       <style>{`
