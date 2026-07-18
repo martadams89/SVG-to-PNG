@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.0...v0.4.1) (2026-07-18)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#7](https://github.com/martadams89/SVG-to-PNG/issues/7)) ([90dd22b](https://github.com/martadams89/SVG-to-PNG/commit/90dd22b859d36df377ac05abdb47edb3565c85d0))
+
 ## [0.4.0](https://github.com/martadams89/SVG-to-PNG/compare/v0.3.0...v0.4.0) (2026-07-13)
 
 
