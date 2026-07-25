@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.1...v0.4.2) (2026-07-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency lucide-react to v1 ([#16](https://github.com/martadams89/SVG-to-PNG/issues/16)) ([ad1c6a5](https://github.com/martadams89/SVG-to-PNG/commit/ad1c6a5067be7521937926988168c99af2836513))
+
 ## [0.4.1](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.0...v0.4.1) (2026-07-18)
 
 
