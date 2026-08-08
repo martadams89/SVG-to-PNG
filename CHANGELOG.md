@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.3...v0.4.4) (2026-08-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency motion to v13 ([#24](https://github.com/martadams89/SVG-to-PNG/issues/24)) ([c65a44b](https://github.com/martadams89/SVG-to-PNG/commit/c65a44b799617cf141150b48c00b96c7c2534678))
+
 ## [0.4.3](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.2...v0.4.3) (2026-07-26)
 
 
