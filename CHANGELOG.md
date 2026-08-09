@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.5](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.4...v0.4.5) (2026-08-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-dropzone to v20 ([#25](https://github.com/martadams89/SVG-to-PNG/issues/25)) ([2eba57b](https://github.com/martadams89/SVG-to-PNG/commit/2eba57b1f94ea0d678754c6bb18e46e21509ba0f))
+
 ## [0.4.4](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.3...v0.4.4) (2026-08-08)
 
 
