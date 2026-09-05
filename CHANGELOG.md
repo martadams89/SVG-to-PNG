@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.6](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.5...v0.4.6) (2026-09-05)
+
+
+### Bug Fixes
+
+* **renovate:** hold TypeScript 7 until the project's own TS7 issues are fixed ([#31](https://github.com/martadams89/SVG-to-PNG/issues/31)) ([31d8233](https://github.com/martadams89/SVG-to-PNG/commit/31d8233519245733006236aac4763a03ad9ccc0b))
+
 ## [0.4.5](https://github.com/martadams89/SVG-to-PNG/compare/v0.4.4...v0.4.5) (2026-08-09)
 
 
