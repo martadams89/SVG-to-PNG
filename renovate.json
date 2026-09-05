@@ -20,6 +20,12 @@
   },
   "packageRules": [
     {
+      "description": "Hold TypeScript 7 until this project's TS2882 side-effect CSS import error is fixed under it. Remove once that's resolved and CI passes on a TS7 bump.",
+      "matchDepNames": ["typescript"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
       "description": "Auto-merge everything — major/minor/patch/pin/digest — once required CI is green (lint/typecheck, tests, build). CI is the gate, not semver.",
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
       "automerge": true,
